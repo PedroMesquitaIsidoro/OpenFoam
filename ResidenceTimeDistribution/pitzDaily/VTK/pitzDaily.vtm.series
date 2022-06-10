@@ -1,0 +1,7 @@
+{
+  "file-series-version" : "1.0",
+  "files" : [
+    { "name" : "pitzDaily_0.vtm", "time" : 0 },
+    { "name" : "pitzDaily_65.vtm", "time" : 65 }
+  ]
+}
