@@ -1,0 +1,30 @@
+{
+  "file-series-version" : "1.0",
+  "files" : [
+    { "name" : "pitzDaily_parte2_0.vtm", "time" : 0 },
+    { "name" : "pitzDaily_parte2_50.vtm", "time" : 5 },
+    { "name" : "pitzDaily_parte2_100.vtm", "time" : 10 },
+    { "name" : "pitzDaily_parte2_150.vtm", "time" : 15 },
+    { "name" : "pitzDaily_parte2_200.vtm", "time" : 20 },
+    { "name" : "pitzDaily_parte2_250.vtm", "time" : 25 },
+    { "name" : "pitzDaily_parte2_300.vtm", "time" : 30 },
+    { "name" : "pitzDaily_parte2_350.vtm", "time" : 35 },
+    { "name" : "pitzDaily_parte2_400.vtm", "time" : 40 },
+    { "name" : "pitzDaily_parte2_450.vtm", "time" : 45 },
+    { "name" : "pitzDaily_parte2_500.vtm", "time" : 50 },
+    { "name" : "pitzDaily_parte2_550.vtm", "time" : 55 },
+    { "name" : "pitzDaily_parte2_600.vtm", "time" : 60 },
+    { "name" : "pitzDaily_parte2_650.vtm", "time" : 65 },
+    { "name" : "pitzDaily_parte2_700.vtm", "time" : 70 },
+    { "name" : "pitzDaily_parte2_750.vtm", "time" : 75 },
+    { "name" : "pitzDaily_parte2_800.vtm", "time" : 80 },
+    { "name" : "pitzDaily_parte2_850.vtm", "time" : 85 },
+    { "name" : "pitzDaily_parte2_900.vtm", "time" : 90 },
+    { "name" : "pitzDaily_parte2_950.vtm", "time" : 95 },
+    { "name" : "pitzDaily_parte2_1000.vtm", "time" : 100 },
+    { "name" : "pitzDaily_parte2_1050.vtm", "time" : 105 },
+    { "name" : "pitzDaily_parte2_1100.vtm", "time" : 110 },
+    { "name" : "pitzDaily_parte2_1150.vtm", "time" : 115 },
+    { "name" : "pitzDaily_parte2_1200.vtm", "time" : 120 }
+  ]
+}
