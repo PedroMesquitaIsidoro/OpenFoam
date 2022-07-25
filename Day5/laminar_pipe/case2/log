@@ -1,0 +1,76 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1812                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : v1812 OPENFOAM=1812
+Arch   : "LSB;label=32;scalar=64"
+Exec   : simpleFoam
+Date   : Jul 25 2022
+Time   : 16:16:29
+Host   : DESKTOP-2P6APRA
+PID    : 20219
+I/O    : uncollated
+Case   : /home/pedro/OpenFoam/Day5/laminar_pipe/case2
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+
+SIMPLE: convergence criteria
+    field p	 tolerance 0.0001
+    field U	 tolerance 0.0001
+    field nuTilda	 tolerance 0.0001
+    field k	 tolerance 0.0001
+    field omega	 tolerance 0.0001
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Selecting incompressible transport model Newtonian
+Selecting turbulence model type laminar
+Selecting laminar stress model Stokes
+No MRF models present
+
+No finite volume options present
+
+Starting time loop
+
+surfaceFieldValue inMassFlow:
+    operation     = sum
+    total faces   = 10
+    total area    = 0.1
+
+
+surfaceFieldValue outMassFlow:
+    operation     = sum
+    total faces   = 10
+    total area    = 0.1
+
+
+surfaceFieldValue inPre:
+    operation     = weightedAverage
+    total faces   = 10
+    total area    = 0.1
+
+--> FOAM FATAL IO ERROR: 
+The 'weightedAverage' operation is missing a weightField.
+Either provide the weightField, use weightField 'none' to suppress weighting,
+or use a different operation.
+
+file: /home/pedro/OpenFoam/Day5/laminar_pipe/case2/system/controlDict.functions.inPre
+
+    From function void Foam::functionObjects::fieldValues::surfaceFieldValue::initialise(const Foam::dictionary&)
+    in file fieldValues/surfaceFieldValue/surfaceFieldValue.C at line 593.
+

@@ -26,7 +26,7 @@ results
             max(U)          ( 0.91890839 0.035821913 0 );
             max(U)_position ( 0.05 -0.45 0.05 );
             min(p)_position ( 10 -0.45 0.05 );
-            max(p)_position ( 0.05 -0.45 0.05 );
+            max(p)_position ( 0.05 0.45 0.05 );
         }
         label
         {
@@ -36,13 +36,13 @@ results
             max(U)_processor 0;
             min(p)_cell     99;
             min(p)_processor 0;
-            max(p)_cell     0;
+            max(p)_cell     900;
             max(p)_processor 0;
         }
         scalar
         {
             min(p)          0;
-            max(p)          1.675409957305678;
+            max(p)          1.675409969255926;
         }
     }
     inMassFlow
@@ -56,7 +56,7 @@ results
     {
         scalar
         {
-            sum(outlet,phi) 0.1000000017949368;
+            sum(outlet,phi) 0.1000000016665171;
         }
     }
     inPre
@@ -64,7 +64,7 @@ results
         scalar
         {
             weightedAverage(inlet,phi) -0.01;
-            weightedAverage(inlet,p) 1.53506992076163;
+            weightedAverage(inlet,p) 1.535069930234684;
         }
         vector
         {
@@ -75,7 +75,7 @@ results
     {
         vector
         {
-            max(outlet,U)   ( 1.469063 3.4558065e-06 0 );
+            max(outlet,U)   ( 1.469063 3.4569439e-06 0 );
         }
         scalar
         {

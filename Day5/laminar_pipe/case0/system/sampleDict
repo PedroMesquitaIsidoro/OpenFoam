@@ -64,7 +64,7 @@ sets
 
     s2
     {
-        type            lineCell;
+        type            midPoint;
 
         //type            lineUniform;
 	//nPoints 	100;

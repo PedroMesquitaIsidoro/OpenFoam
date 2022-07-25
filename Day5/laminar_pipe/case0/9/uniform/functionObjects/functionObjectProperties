@@ -42,7 +42,7 @@ results
         scalar
         {
             min(p)          0;
-            max(p)          1.675502036587769;
+            max(p)          1.675506543740303;
         }
     }
     inMassFlow
@@ -56,7 +56,7 @@ results
     {
         scalar
         {
-            sum(outlet,phi) 0.1000000113219471;
+            sum(outlet,phi) 0.09999999925692828;
         }
     }
     inPre
@@ -64,7 +64,7 @@ results
         scalar
         {
             weightedAverage(inlet,phi) -0.01;
-            weightedAverage(inlet,p) 1.535161744597902;
+            weightedAverage(inlet,p) 1.5351662378786;
         }
         vector
         {
@@ -75,7 +75,7 @@ results
     {
         vector
         {
-            max(outlet,U)   ( 1.4698011 1.5778217e-05 0 );
+            max(outlet,U)   ( 1.4698011 1.5767062e-05 0 );
         }
         scalar
         {

@@ -55,7 +55,7 @@ minmaxdomain
 {
     type fieldMinMax;
 
-    functionObjectLibs ("libfieldFunctionObjects.so");
+    libs ("libfieldFunctionObjects.so");
 
     enabled true; //true or false
 
@@ -75,7 +75,7 @@ minmaxdomain
 inMassFlow
 {
     type            surfaceFieldValue;
-    functionObjectLibs ("libfieldFunctionObjects.so");
+    libs ("libfieldFunctionObjects.so");
     enabled         true;
 
     //writeControl     outputTime;
@@ -102,7 +102,7 @@ inMassFlow
 outMassFlow
 {
     type            surfaceFieldValue;
-    functionObjectLibs ("libfieldFunctionObjects.so");
+    libs ("libfieldFunctionObjects.so");
     enabled         true;
 
     //writeControl     outputTime;
@@ -130,7 +130,7 @@ outMassFlow
 inPre
 {
     type            surfaceFieldValue;
-    functionObjectLibs ("libfieldFunctionObjects.so");
+    libs ("libfieldFunctionObjects.so");
     enabled         true;
 
     //writeControl     outputTime;
@@ -152,6 +152,8 @@ inPre
         U
 	p
     );
+
+    weightField none;
 }
 
 /*
@@ -179,7 +181,7 @@ weightedAverage
 outMax
 {
     type            surfaceFieldValue;
-    functionObjectLibs ("libfieldFunctionObjects.so");
+    libs ("libfieldFunctionObjects.so");
     enabled         true;
 
     //writeControl     outputTime;

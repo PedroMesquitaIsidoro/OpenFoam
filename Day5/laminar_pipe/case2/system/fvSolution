@@ -26,7 +26,7 @@ solvers
 */
         solver           GAMG;
         tolerance        1e-6;
-        relTol           0.0;
+        relTol           0.01;
         smoother         GaussSeidel;
         nPreSweeps       0;
         nPostSweeps      2;

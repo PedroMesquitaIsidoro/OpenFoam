@@ -35,7 +35,7 @@ sets
 //before mod mesh
     s1
     {
-        type            lineCell;
+        type            midPoint;
 
         //type          lineUniform;
 	//nPoints 	100;
@@ -64,7 +64,7 @@ sets
 
     s2
     {
-        type            lineCell;
+        type            midPoint;
 
         //type            lineUniform;
 	//nPoints 	100;
