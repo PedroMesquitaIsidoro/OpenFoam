@@ -51,7 +51,7 @@ functions
 
 ///////////////////////////////////////////////////////////////////////////
 
-minmaxdomain
+minmaxdomain // Minimum and maximum value of the field variables (p and U)
 {
     type fieldMinMax;
 
@@ -72,7 +72,7 @@ minmaxdomain
 ///////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////
-inMassFlow
+inMassFlow // Mass flow in a boundary patch (inlet)
 {
     type            surfaceFieldValue;
     libs ("libfieldFunctionObjects.so");
@@ -99,7 +99,7 @@ inMassFlow
 ///////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////
-outMassFlow
+outMassFlow // Mass flow in a bondary patch (outlet)
 {
     type            surfaceFieldValue;
     libs ("libfieldFunctionObjects.so");
@@ -127,7 +127,8 @@ outMassFlow
 
 ///////////////////////////////////////////////////////////////////////////
 
-inPre
+
+inPre // Weighted average in a boundary patch (inlet for U and p)
 {
     type            surfaceFieldValue;
     libs ("libfieldFunctionObjects.so");
@@ -179,7 +180,7 @@ weightedAverage
 
 ///////////////////////////////////////////////////////////////////////////
 
-outMax
+outMax // Maximum value ind a boundary patch (outlet)
 {
     type            surfaceFieldValue;
     libs ("libfieldFunctionObjects.so");
