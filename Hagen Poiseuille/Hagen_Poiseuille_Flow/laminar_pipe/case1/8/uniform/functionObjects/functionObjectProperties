@@ -1,0 +1,89 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2112                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    arch        "LSB;label=32;scalar=64";
+    class       dictionary;
+    location    "8/uniform/functionObjects";
+    object      functionObjectProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+cdf7e925f5746741c316f5fbcf39ad0dfca90775
+{
+    minmaxdomain
+    {
+        vector
+        {
+            min(U)          ( 0.24881279 0.00032984447 0 );
+            min(U)_position ( 0.05 -0.45 0.05 );
+            max(U)          ( 0.24881279 0.00032984447 0 );
+            max(U)_position ( 0.05 -0.45 0.05 );
+            min(p)_position ( 10 -0.45 0.05 );
+            max(p)_position ( 0 -0.45 0.05 );
+        }
+        label
+        {
+            min(U)_cell     0;
+            min(U)_processor 0;
+            max(U)_cell     0;
+            max(U)_processor 0;
+            min(p)_cell     99;
+            min(p)_processor 0;
+            max(p)_cell     0;
+            max(p)_processor 0;
+        }
+        scalar
+        {
+            min(p)          0;
+            max(p)          1.5352;
+        }
+    }
+    inMassFlow
+    {
+        scalar
+        {
+            sum(inlet,phi)  -0.07149326683868557;
+        }
+    }
+    outMassFlow
+    {
+        scalar
+        {
+            sum(outlet,phi) 0.07149332146319942;
+        }
+    }
+    inPre
+    {
+        scalar
+        {
+            weightedAverage(inlet,phi) -0.007149326683868556;
+            weightedAverage(inlet,p) 1.5352;
+        }
+        vector
+        {
+            weightedAverage(inlet,U) ( 0.71493267 0 0 );
+        }
+    }
+    outMax
+    {
+        vector
+        {
+            max(outlet,U)   ( 1.0081463 2.3185668e-08 0 );
+        }
+        scalar
+        {
+            max(outlet,p)   0;
+        }
+    }
+}
+
+
+// ************************************************************************* //
