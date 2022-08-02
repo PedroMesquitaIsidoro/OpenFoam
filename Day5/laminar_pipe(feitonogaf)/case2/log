@@ -1,0 +1,3319 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1812                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : v1812 OPENFOAM=1812
+Arch   : "LSB;label=32;scalar=64"
+Exec   : simpleFoam
+Date   : Jul 26 2022
+Time   : 06:10:43
+Host   : DESKTOP-2P6APRA
+PID    : 593
+I/O    : uncollated
+Case   : /home/pedro/OpenFoam/Day5/laminar_pipe/case2
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+
+SIMPLE: convergence criteria
+    field p	 tolerance 0.0001
+    field U	 tolerance 0.0001
+    field nuTilda	 tolerance 0.0001
+    field k	 tolerance 0.0001
+    field omega	 tolerance 0.0001
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Selecting incompressible transport model Newtonian
+Selecting turbulence model type laminar
+Selecting laminar stress model Stokes
+No MRF models present
+
+No finite volume options present
+
+Starting time loop
+
+surfaceFieldValue inMassFlow:
+    operation     = sum
+    total faces   = 10
+    total area    = 0.1
+
+
+surfaceFieldValue outMassFlow:
+    operation     = sum
+    total faces   = 10
+    total area    = 0.1
+
+
+surfaceFieldValue inPre:
+    operation     = weightedAverage
+    total faces   = 10
+    total area    = 0.1
+    weight field  = none
+
+
+surfaceFieldValue outMax:
+    operation     = max
+    total faces   = 10
+    total area    = 0.1
+
+
+Time = 1
+
+DILUPBiCG:  Solving for Ux, Initial residual = 1, Final residual = 9.3937805e-09, No Iterations 6
+DILUPBiCG:  Solving for Uy, Initial residual = 0.98486044, Final residual = 7.6353448e-10, No Iterations 7
+GAMG:  Solving for p, Initial residual = 1, Final residual = 0.0016665345, No Iterations 4
+GAMG:  Solving for p, Initial residual = 6.3019193e-06, Final residual = 2.29874e-07, No Iterations 2
+time step continuity errors : sum local = 6.0789885e-06, global = -1.0186841e-06, cumulative = -1.0186841e-06
+ExecutionTime = 0.15 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.62275571 0.0089288765 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.62275571 0.0089288765 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 17.718847 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.099998981
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 17.671715
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (0.33805923 0.0019638416 0)
+    max(outlet) of p = 0
+
+Time = 2
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.85873509, Final residual = 5.4267381e-11, No Iterations 6
+DILUPBiCG:  Solving for Uy, Initial residual = 0.26505059, Final residual = 1.1575005e-10, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.021234265, Final residual = 0.00014416344, No Iterations 3
+GAMG:  Solving for p, Initial residual = 2.3363746e-05, Final residual = 8.2478035e-07, No Iterations 2
+time step continuity errors : sum local = 1.5892655e-05, global = -2.3054153e-06, cumulative = -3.3240994e-06
+ExecutionTime = 0.16 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92803025 0.0075805267 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92803025 0.0075805267 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 45.526297 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.099997695
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 45.480458
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (0.69192819 0.010091115 0)
+    max(outlet) of p = 0
+
+Time = 3
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.96333988, Final residual = 4.4148371e-09, No Iterations 5
+DILUPBiCG:  Solving for Uy, Initial residual = 0.30107952, Final residual = 2.9735579e-09, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0046768111, Final residual = 3.2913088e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 2.7013604e-05, Final residual = 1.3339699e-07, No Iterations 3
+time step continuity errors : sum local = 1.2939941e-06, global = -4.7568418e-08, cumulative = -3.3716678e-06
+ExecutionTime = 0.16 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.95160752 0.016234665 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.95160752 0.016234665 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 48.46583 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.099999952
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 48.394281
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.1471376 0.023341599 0)
+    max(outlet) of p = 0
+
+Time = 4
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.88996845, Final residual = 2.8211415e-09, No Iterations 5
+DILUPBiCG:  Solving for Uy, Initial residual = 0.16714469, Final residual = 1.3680392e-09, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0056753954, Final residual = 3.5381257e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.00074783536, Final residual = 6.3448293e-06, No Iterations 3
+time step continuity errors : sum local = 2.5356388e-06, global = 4.7547322e-07, cumulative = -2.8961946e-06
+ExecutionTime = 0.16 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.93101072 0.026497653 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.93101072 0.026497653 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 33.423935 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000048
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 33.322122
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.405896 0.030757671 0)
+    max(outlet) of p = 0
+
+Time = 5
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.69715427, Final residual = 1.3469908e-10, No Iterations 6
+DILUPBiCG:  Solving for Uy, Initial residual = 0.19781192, Final residual = 2.2635451e-09, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0089678302, Final residual = 4.8182171e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 4.2270734e-05, Final residual = 3.172551e-07, No Iterations 3
+time step continuity errors : sum local = 2.1090509e-06, global = 2.9366774e-07, cumulative = -2.6025269e-06
+ExecutionTime = 0.18 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.91938265 0.033282459 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.91938265 0.033282459 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = -0.010525719 in cell 499 at location (9.95 -0.05 0.05)
+    max(p) = 12.284875 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000029
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 12.152418
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.45069 0.030330651 0)
+    max(outlet) of p = 0
+
+Time = 6
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.26106351, Final residual = 3.182938e-09, No Iterations 5
+DILUPBiCG:  Solving for Uy, Initial residual = 0.24370339, Final residual = 4.6822464e-09, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.02324679, Final residual = 0.00015017528, No Iterations 3
+GAMG:  Solving for p, Initial residual = 4.1098725e-05, Final residual = 3.1763155e-07, No Iterations 3
+time step continuity errors : sum local = 2.4719357e-06, global = 7.0683507e-08, cumulative = -2.5318434e-06
+ExecutionTime = 0.18 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.91691373 0.036629272 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.91691373 0.036629272 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = -4.836799 in cell 404 at location (0.45 -0.05 0.05)
+    max(p) = 0 in cell 99 at location (10 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000007
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = -4.5341634
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.3637368 0.021342451 0)
+    max(outlet) of p = 0
+
+Time = 7
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.21542199, Final residual = 1.2343114e-09, No Iterations 5
+DILUPBiCG:  Solving for Uy, Initial residual = 0.21694922, Final residual = 5.963238e-11, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.03873726, Final residual = 0.00028758914, No Iterations 3
+GAMG:  Solving for p, Initial residual = 5.5432849e-05, Final residual = 5.0115736e-07, No Iterations 3
+time step continuity errors : sum local = 2.4367535e-06, global = -2.5724122e-08, cumulative = -2.5575675e-06
+ExecutionTime = 0.18 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.91804703 0.038027593 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.91804703 0.038027593 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = -11.429982 in cell 402 at location (0.25 -0.05 0.05)
+    max(p) = 0 in cell 99 at location (10 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.099999974
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = -11.230653
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.2518033 0.0073514968 0)
+    max(outlet) of p = 0
+
+Time = 8
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.25946707, Final residual = 9.3908482e-10, No Iterations 5
+DILUPBiCG:  Solving for Uy, Initial residual = 0.17520998, Final residual = 2.5750123e-09, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.013478947, Final residual = 0.00010183349, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.00013411247, Final residual = 2.9992158e-07, No Iterations 4
+time step continuity errors : sum local = 4.8859777e-07, global = 7.2732873e-09, cumulative = -2.5502942e-06
+ExecutionTime = 0.2 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.9200879 0.03809743 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.9200879 0.03809743 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = -10.612582 in cell 402 at location (0.25 -0.05 0.05)
+    max(p) = 0 in cell 99 at location (10 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = -10.440996
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.1788136 0.016879567 0)
+    max(outlet) of p = 0
+
+Time = 9
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.18233466, Final residual = 5.8138929e-10, No Iterations 5
+DILUPBiCG:  Solving for Uy, Initial residual = 0.12120695, Final residual = 1.0823103e-09, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.014601478, Final residual = 0.00010037697, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.00022451326, Final residual = 1.8395706e-06, No Iterations 3
+time step continuity errors : sum local = 1.6460514e-06, global = -1.5673173e-07, cumulative = -2.7070259e-06
+ExecutionTime = 0.2 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92206533 0.037198254 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92206533 0.037198254 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = -6.0508195 in cell 502 at location (0.25 0.05 0.05)
+    max(p) = 0 in cell 99 at location (10 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.099999843
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = -5.9072101
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.1522245 0.020764948 0)
+    max(outlet) of p = 0
+
+Time = 10
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.10206087, Final residual = 4.1221057e-10, No Iterations 5
+DILUPBiCG:  Solving for Uy, Initial residual = 0.067624064, Final residual = 2.4325918e-09, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.022812675, Final residual = 0.00018392444, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.00010348099, Final residual = 8.4323018e-07, No Iterations 3
+time step continuity errors : sum local = 1.7267408e-06, global = -1.8646279e-07, cumulative = -2.8934887e-06
+ExecutionTime = 0.23 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92341761 0.035923235 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92341761 0.035923235 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = -0.93911341 in cell 501 at location (0.15 0.05 0.05)
+    max(p) = 0.0069123928 in cell 199 at location (9.95 -0.35 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.099999814
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = -0.8217971
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.1615029 0.017962515 0)
+    max(outlet) of p = 0
+
+Time = 11
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.04610758, Final residual = 4.6057748e-10, No Iterations 5
+DILUPBiCG:  Solving for Uy, Initial residual = 0.030619371, Final residual = 5.1796912e-10, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.092808294, Final residual = 0.00077786067, No Iterations 3
+GAMG:  Solving for p, Initial residual = 7.8543437e-05, Final residual = 6.5312479e-07, No Iterations 3
+time step continuity errors : sum local = 1.3822168e-06, global = -1.5786287e-07, cumulative = -3.0513516e-06
+ExecutionTime = 0.23 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.9239594 0.034792074 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.9239594 0.034792074 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 3.0583322 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.099999842
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 2.8946117
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.1921104 0.0115044 0)
+    max(outlet) of p = 0
+
+Time = 12
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.035416468, Final residual = 3.4200013e-10, No Iterations 5
+DILUPBiCG:  Solving for Uy, Initial residual = 0.045588096, Final residual = 5.7630581e-10, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.028936812, Final residual = 0.00021455439, No Iterations 3
+GAMG:  Solving for p, Initial residual = 7.3554511e-05, Final residual = 5.8823915e-07, No Iterations 3
+time step continuity errors : sum local = 9.2335303e-07, global = -8.9459959e-08, cumulative = -3.1408116e-06
+ExecutionTime = 0.25 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.9238729 0.034055001 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.9238729 0.034055001 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 4.7894931 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.099999911
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 4.6354458
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.2289346 0.0031842408 0)
+    max(outlet) of p = 0
+
+Time = 13
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.05187041, Final residual = 3.4142284e-10, No Iterations 5
+DILUPBiCG:  Solving for Uy, Initial residual = 0.075963866, Final residual = 1.343345e-09, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.015803158, Final residual = 4.5892012e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 4.4090411e-05, Final residual = 2.6025721e-07, No Iterations 3
+time step continuity errors : sum local = 2.2822034e-07, global = -1.0991102e-08, cumulative = -3.1518027e-06
+ExecutionTime = 0.25 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92347049 0.033729195 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92347049 0.033729195 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 4.8770612 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.099999989
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 4.7293773
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.260832 0.0052243469 0)
+    max(outlet) of p = 0
+
+Time = 14
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.049653169, Final residual = 5.1971413e-10, No Iterations 5
+DILUPBiCG:  Solving for Uy, Initial residual = 0.073561623, Final residual = 1.7794454e-09, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.014285652, Final residual = 0.00012762956, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.00038020404, Final residual = 2.0397527e-06, No Iterations 3
+time step continuity errors : sum local = 5.8196781e-07, global = 8.056009e-08, cumulative = -3.0712426e-06
+ExecutionTime = 0.25 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92299561 0.033721223 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92299561 0.033721223 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 3.9679279 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000008
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 3.8232179
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.2826413 0.0072705351 0)
+    max(outlet) of p = 0
+
+Time = 15
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.032432526, Final residual = 5.0977538e-10, No Iterations 5
+DILUPBiCG:  Solving for Uy, Initial residual = 0.063454211, Final residual = 3.5136106e-09, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.015299153, Final residual = 0.00014939651, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.0011606201, Final residual = 5.2631349e-06, No Iterations 3
+time step continuity errors : sum local = 4.5974772e-07, global = 6.1094724e-08, cumulative = -3.0101478e-06
+ExecutionTime = 0.26 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92259232 0.033901332 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92259232 0.033901332 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 2.8065516 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000006
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 2.6621541
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.2946054 0.0076639568 0)
+    max(outlet) of p = 0
+
+Time = 16
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.018536637, Final residual = 6.9786173e-09, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.056709513, Final residual = 5.9273858e-10, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.018232648, Final residual = 2.354972e-05, No Iterations 4
+GAMG:  Solving for p, Initial residual = 7.382437e-05, Final residual = 7.9679634e-07, No Iterations 3
+time step continuity errors : sum local = 1.1770713e-07, global = 3.3828042e-09, cumulative = -3.006765e-06
+ExecutionTime = 0.26 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.9223247 0.034148998 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.9223247 0.034148998 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.8857857 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.1
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.7400779
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.300148 0.0069411166 0)
+    max(outlet) of p = 0
+
+Time = 17
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.014111825, Final residual = 4.7906078e-09, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.050291632, Final residual = 5.6220592e-10, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.025087871, Final residual = 0.00024969851, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.0016129889, Final residual = 1.1617188e-05, No Iterations 3
+time step continuity errors : sum local = 5.2730699e-07, global = 6.3875204e-08, cumulative = -2.9428898e-06
+ExecutionTime = 0.26 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92219901 0.034376935 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92219901 0.034376935 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.4003503 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000006
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.2526982
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.3031542 0.0057851975 0)
+    max(outlet) of p = 0
+
+Time = 18
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.013334911, Final residual = 2.5337472e-10, No Iterations 5
+DILUPBiCG:  Solving for Uy, Initial residual = 0.046737306, Final residual = 1.4202249e-09, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.03236606, Final residual = 0.00013291991, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.00017243456, Final residual = 1.0915224e-06, No Iterations 3
+time step continuity errors : sum local = 1.7190507e-07, global = 1.5731777e-08, cumulative = -2.9271581e-06
+ExecutionTime = 0.28 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92218624 0.034538467 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92218624 0.034538467 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.3149991 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000002
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.1654988
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.3064252 0.0047046276 0)
+    max(outlet) of p = 0
+
+Time = 19
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.01180816, Final residual = 5.2430795e-09, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.039647322, Final residual = 3.1792671e-10, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.03057534, Final residual = 0.00011896897, No Iterations 3
+GAMG:  Solving for p, Initial residual = 7.7153879e-05, Final residual = 7.5660978e-07, No Iterations 3
+time step continuity errors : sum local = 2.213737e-07, global = -1.2095824e-08, cumulative = -2.9392539e-06
+ExecutionTime = 0.28 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92224143 0.034622265 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92224143 0.034622265 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.4763755 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.099999988
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.3255252
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.3112583 0.0039406116 0)
+    max(outlet) of p = 0
+
+Time = 20
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0099971107, Final residual = 6.8968939e-09, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.026196148, Final residual = 3.160292e-10, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.021781004, Final residual = 0.00013873471, No Iterations 3
+GAMG:  Solving for p, Initial residual = 8.2738428e-05, Final residual = 8.5868308e-07, No Iterations 3
+time step continuity errors : sum local = 3.1739837e-07, global = -2.025313e-08, cumulative = -2.959507e-06
+ExecutionTime = 0.29 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.9223216 0.034640576 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.9223216 0.034640576 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.7166329 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.09999998
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.565045
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.3177149 0.0035195379 0)
+    max(outlet) of p = 0
+
+Time = 21
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0087818023, Final residual = 2.2852263e-09, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.016883253, Final residual = 4.5521572e-10, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.014668303, Final residual = 8.7793742e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 6.0177827e-05, Final residual = 6.0279254e-07, No Iterations 3
+time step continuity errors : sum local = 2.3292706e-07, global = -1.2803708e-08, cumulative = -2.9723107e-06
+ExecutionTime = 0.31 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92239565 0.034616249 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92239565 0.034616249 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.9159572 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.099999987
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.7641648
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.325165 0.0033890825 0)
+    max(outlet) of p = 0
+
+Time = 22
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0080748508, Final residual = 1.8537037e-09, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.01922651, Final residual = 7.7785703e-09, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.010780409, Final residual = 4.2113176e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 3.4927124e-05, Final residual = 3.2561741e-07, No Iterations 3
+time step continuity errors : sum local = 1.1815049e-07, global = -5.1214389e-09, cumulative = -2.9774322e-06
+ExecutionTime = 0.31 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92244724 0.034572674 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92244724 0.034572674 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 2.0213399 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.099999995
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.8697034
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.332812 0.0033220527 0)
+    max(outlet) of p = 0
+
+Time = 23
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0073964722, Final residual = 2.2915894e-09, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.020984399, Final residual = 2.356328e-10, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0092856561, Final residual = 1.9778198e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.9503542e-05, Final residual = 6.3537925e-07, No Iterations 2
+time step continuity errors : sum local = 2.0552314e-07, global = -1.9426393e-08, cumulative = -2.9968586e-06
+ExecutionTime = 0.32 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92247271 0.034527942 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92247271 0.034527942 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 2.0347717 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.099999981
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.8834661
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.3400417 0.0032661516 0)
+    max(outlet) of p = 0
+
+Time = 24
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0067159905, Final residual = 2.4244103e-09, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.020382497, Final residual = 2.3960312e-10, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0084959247, Final residual = 3.056284e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 3.3968531e-05, Final residual = 2.7730861e-07, No Iterations 3
+time step continuity errors : sum local = 7.981321e-08, global = 8.0689655e-09, cumulative = -2.9887896e-06
+ExecutionTime = 0.32 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92247634 0.034492803 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92247634 0.034492803 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.9883438 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.8373956
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.3465562 0.0031909094 0)
+    max(outlet) of p = 0
+
+Time = 25
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0062504433, Final residual = 2.0928424e-09, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.018570848, Final residual = 2.4055391e-10, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0079218825, Final residual = 2.6814732e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 3.1317737e-05, Final residual = 3.3120382e-07, No Iterations 3
+time step continuity errors : sum local = 8.7879225e-08, global = 4.2808366e-09, cumulative = -2.9845087e-06
+ExecutionTime = 0.32 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92246605 0.034471296 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92246605 0.034471296 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.9201945 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.1
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.7695369
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.3523415 0.0030870072 0)
+    max(outlet) of p = 0
+
+Time = 26
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0059252518, Final residual = 1.7126062e-09, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.015745993, Final residual = 4.4655942e-10, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0072732726, Final residual = 2.2749433e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 2.6213956e-05, Final residual = 8.4038196e-07, No Iterations 2
+time step continuity errors : sum local = 2.1605318e-07, global = 3.3736242e-08, cumulative = -2.9507725e-06
+ExecutionTime = 0.34 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92244967 0.034462627 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92244967 0.034462627 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.8591255 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000003
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.708653
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.3575516 0.0029601566 0)
+    max(outlet) of p = 0
+
+Time = 27
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0055914573, Final residual = 1.4498002e-09, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.01346293, Final residual = 4.5920973e-09, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.0066208269, Final residual = 2.2680601e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 2.4905601e-05, Final residual = 2.7783306e-07, No Iterations 3
+time step continuity errors : sum local = 7.1931875e-08, global = 4.7795295e-09, cumulative = -2.945993e-06
+ExecutionTime = 0.34 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92243344 0.034463406 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92243344 0.034463406 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.8190183 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.1
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.6686267
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.3623861 0.0028224039 0)
+    max(outlet) of p = 0
+
+Time = 28
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0052348579, Final residual = 1.2961407e-09, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.012830522, Final residual = 5.7050727e-09, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.0058175158, Final residual = 2.6503771e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 2.7653313e-05, Final residual = 7.0394674e-07, No Iterations 2
+time step continuity errors : sum local = 1.8658214e-07, global = 1.0991705e-08, cumulative = -2.9350013e-06
+ExecutionTime = 0.34 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92242074 0.034469499 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92242074 0.034469499 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.8008202 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.6504296
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.3670061 0.0026851426 0)
+    max(outlet) of p = 0
+
+Time = 29
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0048690001, Final residual = 1.1781272e-09, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.011118769, Final residual = 4.3355635e-09, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.0051428469, Final residual = 1.590904e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.6023526e-05, Final residual = 3.2852188e-07, No Iterations 2
+time step continuity errors : sum local = 8.9068412e-08, global = 9.0632003e-09, cumulative = -2.9259381e-06
+ExecutionTime = 0.35 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241304 0.034477288 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241304 0.034477288 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.7978994 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.6474624
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.3715003 0.0025555468 0)
+    max(outlet) of p = 0
+
+Time = 30
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0045083303, Final residual = 1.0864853e-09, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0094831464, Final residual = 3.9914455e-09, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.0045777551, Final residual = 1.3987431e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.3896385e-05, Final residual = 3.5576401e-07, No Iterations 2
+time step continuity errors : sum local = 9.7559084e-08, global = -3.2728325e-09, cumulative = -2.9292109e-06
+ExecutionTime = 0.37 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92240992 0.034484268 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92240992 0.034484268 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.801625 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.099999997
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.6511244
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.3758907 0.0024360789 0)
+    max(outlet) of p = 0
+
+Time = 31
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0041795021, Final residual = 1.0265636e-09, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0089571461, Final residual = 3.2271289e-09, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.0041335031, Final residual = 1.2361183e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.2299672e-05, Final residual = 3.9795844e-07, No Iterations 2
+time step continuity errors : sum local = 1.0918529e-07, global = -2.2354176e-09, cumulative = -2.9314463e-06
+ExecutionTime = 0.39 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241017 0.034489168 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241017 0.034489168 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.8051528 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.099999998
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.6545927
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.3801577 0.0023258516 0)
+    max(outlet) of p = 0
+
+Time = 32
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0038858679, Final residual = 9.7248125e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0086476126, Final residual = 2.9946793e-09, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.003767707, Final residual = 1.1071379e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.111919e-05, Final residual = 3.9019365e-07, No Iterations 2
+time step continuity errors : sum local = 1.0621337e-07, global = 8.7290555e-09, cumulative = -2.9227173e-06
+ExecutionTime = 0.39 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241234 0.034491711 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241234 0.034491711 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.804913 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.6543093
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.3842683 0.0022225203 0)
+    max(outlet) of p = 0
+
+Time = 33
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0036350217, Final residual = 9.2091881e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0080729372, Final residual = 9.0633772e-11, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0034665442, Final residual = 1.162056e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.1795282e-05, Final residual = 3.4848943e-07, No Iterations 2
+time step continuity errors : sum local = 9.3725357e-08, global = 6.7815374e-09, cumulative = -2.9159357e-06
+ExecutionTime = 0.39 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241514 0.034492271 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241514 0.034492271 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.800339 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.6497108
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.3881959 0.002123814 0)
+    max(outlet) of p = 0
+
+Time = 34
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0034162984, Final residual = 8.6905948e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0073170302, Final residual = 8.3464318e-11, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.003121355, Final residual = 1.5280131e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.5622815e-05, Final residual = 3.8625223e-07, No Iterations 2
+time step continuity errors : sum local = 1.0266041e-07, global = 5.4677893e-09, cumulative = -2.9104679e-06
+ExecutionTime = 0.41 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.9224177 0.034491513 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.9224177 0.034491513 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.7927214 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.6420855
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.3919296 0.0020283341 0)
+    max(outlet) of p = 0
+
+Time = 35
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0032120426, Final residual = 8.1676647e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0064138072, Final residual = 9.0211019e-11, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.0027534128, Final residual = 1.3758692e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.4103078e-05, Final residual = 4.3788322e-07, No Iterations 2
+time step continuity errors : sum local = 1.153181e-07, global = 7.8569649e-09, cumulative = -2.902611e-06
+ExecutionTime = 0.41 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241954 0.034490132 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241954 0.034490132 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.7839367 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.6333047
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.3954733 0.00193567 0)
+    max(outlet) of p = 0
+
+Time = 36
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0030188863, Final residual = 7.6588755e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.005483, Final residual = 6.3372571e-09, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.0024898595, Final residual = 1.1521355e-05, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.1795645e-05, Final residual = 3.9661993e-07, No Iterations 2
+time step continuity errors : sum local = 1.0380422e-07, global = 8.4375989e-09, cumulative = -2.8941734e-06
+ExecutionTime = 0.41 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92242053 0.034488681 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92242053 0.034488681 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.7755403 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.6249183
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.3988405 0.0018460906 0)
+    max(outlet) of p = 0
+
+Time = 37
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0028349908, Final residual = 7.1826196e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0050913867, Final residual = 2.1395914e-09, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.0021997091, Final residual = 9.4993026e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 9.6945202e-06, Final residual = 3.4473814e-07, No Iterations 2
+time step continuity errors : sum local = 8.9883121e-08, global = 7.6999585e-09, cumulative = -2.8864734e-06
+ExecutionTime = 0.42 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.9224208 0.034487504 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.9224208 0.034487504 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.7683785 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.6177677
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4020477 0.0017601127 0)
+    max(outlet) of p = 0
+
+Time = 38
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0026629379, Final residual = 6.7304487e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0048055432, Final residual = 2.4883756e-09, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.0019564589, Final residual = 7.8961607e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 8.030169e-06, Final residual = 2.9273614e-07, No Iterations 2
+time step continuity errors : sum local = 7.6131935e-08, global = 6.2426754e-09, cumulative = -2.8802307e-06
+ExecutionTime = 0.42 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92242059 0.034486745 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92242059 0.034486745 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.7626106 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.6120092
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.40511 0.0016781576 0)
+    max(outlet) of p = 0
+
+Time = 39
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0024990297, Final residual = 6.3254017e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0045944169, Final residual = 2.0842138e-09, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.0017999382, Final residual = 6.7676399e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 6.8634915e-06, Final residual = 2.5723285e-07, No Iterations 2
+time step continuity errors : sum local = 6.6752507e-08, global = 4.6941204e-09, cumulative = -2.8755366e-06
+ExecutionTime = 0.42 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92242014 0.034486396 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92242014 0.034486396 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.7579552 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.1
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.6073601
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4080387 0.0016003834 0)
+    max(outlet) of p = 0
+
+Time = 40
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0023450887, Final residual = 5.9552889e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0043659793, Final residual = 1.5957487e-09, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.0016571578, Final residual = 6.4931354e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 6.5744782e-06, Final residual = 9.9532168e-07, No Iterations 1
+time step continuity errors : sum local = 2.5764142e-07, global = 2.5055737e-08, cumulative = -2.8504809e-06
+ExecutionTime = 0.45 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241962 0.034486368 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241962 0.034486368 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.7539827 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000003
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.6033905
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4108411 0.0015266792 0)
+    max(outlet) of p = 0
+
+Time = 41
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0021997978, Final residual = 5.610001e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0040495372, Final residual = 1.4034862e-09, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.0015164297, Final residual = 6.4287005e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 6.5049247e-06, Final residual = 2.4094631e-07, No Iterations 2
+time step continuity errors : sum local = 6.2186937e-08, global = 4.5787631e-09, cumulative = -2.8459021e-06
+ExecutionTime = 0.45 s  ClockTime = 0 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241922 0.034486524 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241922 0.034486524 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.7502954 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.1
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5997037
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4135218 0.0014567545 0)
+    max(outlet) of p = 0
+
+Time = 42
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0020672219, Final residual = 5.2905048e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0037327827, Final residual = 1.2680894e-09, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.001408195, Final residual = 5.5189156e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 5.58358e-06, Final residual = 2.3350723e-07, No Iterations 2
+time step continuity errors : sum local = 6.0071561e-08, global = 5.417927e-09, cumulative = -2.8404842e-06
+ExecutionTime = 0.46 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241895 0.034486755 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241895 0.034486755 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.74668 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5960871
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4160845 0.0013902543 0)
+    max(outlet) of p = 0
+
+Time = 43
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0019456311, Final residual = 4.9990888e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0034177927, Final residual = 1.1522955e-09, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.0012628769, Final residual = 4.1950895e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 4.2441715e-06, Final residual = 1.7867973e-07, No Iterations 2
+time step continuity errors : sum local = 4.5815477e-08, global = 5.1531566e-09, cumulative = -2.835331e-06
+ExecutionTime = 0.46 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241882 0.034486977 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241882 0.034486977 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.7430678 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.592473
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4185325 0.0013268562 0)
+    max(outlet) of p = 0
+
+Time = 44
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0018309384, Final residual = 4.7179651e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0030858088, Final residual = 1.0486952e-09, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.0011258419, Final residual = 3.4084876e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 3.447843e-06, Final residual = 8.3674253e-07, No Iterations 1
+time step continuity errors : sum local = 2.1387492e-07, global = 1.1554072e-08, cumulative = -2.823777e-06
+ExecutionTime = 0.46 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241883 0.034487139 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241883 0.034487139 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.7394973 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5889008
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.42087 0.0012663135 0)
+    max(outlet) of p = 0
+
+Time = 45
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0017227462, Final residual = 4.4502404e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0027751942, Final residual = 9.8893602e-10, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.0010080798, Final residual = 3.1422027e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 3.1774124e-06, Final residual = 7.4194487e-07, No Iterations 1
+time step continuity errors : sum local = 1.890872e-07, global = 1.0180601e-08, cumulative = -2.8135964e-06
+ExecutionTime = 0.48 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241887 0.034487234 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241887 0.034487234 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.73604 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5854422
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4231014 0.0012084594 0)
+    max(outlet) of p = 0
+
+Time = 46
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0016211395, Final residual = 4.1939108e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0026138674, Final residual = 1.0197655e-09, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00090554269, Final residual = 2.9068251e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 2.9378652e-06, Final residual = 6.5727523e-07, No Iterations 1
+time step continuity errors : sum local = 1.6706609e-07, global = 9.4190786e-09, cumulative = -2.8041773e-06
+ExecutionTime = 0.48 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241893 0.034487269 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241893 0.034487269 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.7327654 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5821666
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4252318 0.0011531834 0)
+    max(outlet) of p = 0
+
+Time = 47
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0015257752, Final residual = 3.9511061e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0025001558, Final residual = 1.1118264e-09, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00082489547, Final residual = 2.7516487e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 2.7793234e-06, Final residual = 5.8352197e-07, No Iterations 1
+time step continuity errors : sum local = 1.4796094e-07, global = 9.2702598e-09, cumulative = -2.794907e-06
+ExecutionTime = 0.48 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241899 0.034487259 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241899 0.034487259 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.7297104 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5791114
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.427266 0.0011004044 0)
+    max(outlet) of p = 0
+
+Time = 48
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0014360197, Final residual = 3.7218015e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0023827912, Final residual = 1.0658653e-09, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00076976706, Final residual = 2.5832512e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 2.6075832e-06, Final residual = 5.4611016e-07, No Iterations 1
+time step continuity errors : sum local = 1.3816767e-07, global = 9.0124341e-09, cumulative = -2.7858946e-06
+ExecutionTime = 0.49 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241904 0.034487223 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241904 0.034487223 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.7268782 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5762793
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4292087 0.0010500461 0)
+    max(outlet) of p = 0
+
+Time = 49
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0013519468, Final residual = 3.507757e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0022473511, Final residual = 9.4770587e-10, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00070582099, Final residual = 2.3713955e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 2.3923252e-06, Final residual = 4.9972287e-07, No Iterations 1
+time step continuity errors : sum local = 1.2616981e-07, global = 8.9001715e-09, cumulative = -2.7769944e-06
+ExecutionTime = 0.49 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241907 0.034487181 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241907 0.034487181 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.7242487 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5736501
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4310643 0.0010020241 0)
+    max(outlet) of p = 0
+
+Time = 50
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0012724628, Final residual = 3.3060362e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.002103263, Final residual = 8.131807e-10, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00064986523, Final residual = 2.147255e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 2.1651038e-06, Final residual = 4.6591484e-07, No Iterations 1
+time step continuity errors : sum local = 1.1740093e-07, global = 8.1299919e-09, cumulative = -2.7688644e-06
+ExecutionTime = 0.51 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241908 0.034487145 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241908 0.034487145 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.7217927 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5711944
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4328369 0.00095624218 0)
+    max(outlet) of p = 0
+
+Time = 51
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00119843, Final residual = 3.1180875e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0019548542, Final residual = 7.14069e-10, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00059342167, Final residual = 1.9591606e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.9746181e-06, Final residual = 4.3522182e-07, No Iterations 1
+time step continuity errors : sum local = 1.0945562e-07, global = 7.2577762e-09, cumulative = -2.7616067e-06
+ExecutionTime = 0.53 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241908 0.03448712 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241908 0.03448712 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.7194832 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5688852
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.43453 0.00091259606 0)
+    max(outlet) of p = 0
+
+Time = 52
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0011292031, Final residual = 2.9429517e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0018186692, Final residual = 6.3776981e-10, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00053518401, Final residual = 1.8037738e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.8173356e-06, Final residual = 4.0622093e-07, No Iterations 1
+time step continuity errors : sum local = 1.0197373e-07, global = 6.4326998e-09, cumulative = -2.755174e-06
+ExecutionTime = 0.53 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241907 0.034487109 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241907 0.034487109 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.7173008 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.566703
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4361471 0.00087097983 0)
+    max(outlet) of p = 0
+
+Time = 53
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0010639588, Final residual = 2.7768287e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0016863022, Final residual = 5.7948037e-10, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00048232726, Final residual = 1.7109764e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.7232323e-06, Final residual = 3.9523302e-07, No Iterations 1
+time step continuity errors : sum local = 9.9042133e-08, global = 5.7172947e-09, cumulative = -2.7494567e-06
+ExecutionTime = 0.54 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487109 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487109 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.7152343 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5646366
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4376917 0.00083129114 0)
+    max(outlet) of p = 0
+
+Time = 54
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0010021991, Final residual = 2.6196753e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0015692329, Final residual = 5.3750511e-10, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00043981792, Final residual = 1.6375042e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.6486679e-06, Final residual = 3.9947761e-07, No Iterations 1
+time step continuity errors : sum local = 9.99402e-08, global = 5.3071968e-09, cumulative = -2.7441495e-06
+ExecutionTime = 0.54 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241904 0.034487115 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241904 0.034487115 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.7132786 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5626809
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4391668 0.00079343431 0)
+    max(outlet) of p = 0
+
+Time = 55
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00094422891, Final residual = 2.4707308e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0014842624, Final residual = 5.0505256e-10, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00040216476, Final residual = 1.6373937e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.6480087e-06, Final residual = 4.1848743e-07, No Iterations 1
+time step continuity errors : sum local = 1.0453256e-07, global = 5.3545804e-09, cumulative = -2.7387949e-06
+ExecutionTime = 0.54 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241904 0.034487124 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241904 0.034487124 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.7114311 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5608334
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4405756 0.00075732127 0)
+    max(outlet) of p = 0
+
+Time = 56
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00088969997, Final residual = 2.3295937e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0014097349, Final residual = 4.7760417e-10, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00036950952, Final residual = 1.6948323e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.7052585e-06, Final residual = 4.5240478e-07, No Iterations 1
+time step continuity errors : sum local = 1.1283776e-07, global = 5.5109945e-09, cumulative = -2.7332839e-06
+ExecutionTime = 0.56 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241904 0.034487133 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241904 0.034487133 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.7096895 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5590918
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4419211 0.00072287053 0)
+    max(outlet) of p = 0
+
+Time = 57
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00083822734, Final residual = 2.1960511e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.001338886, Final residual = 4.4949575e-10, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00034478816, Final residual = 1.7147219e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.7247159e-06, Final residual = 4.708469e-07, No Iterations 1
+time step continuity errors : sum local = 1.172745e-07, global = 5.8909362e-09, cumulative = -2.727393e-06
+ExecutionTime = 0.56 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241904 0.03448714 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241904 0.03448714 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.7080502 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5574524
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4432061 0.00069000567 0)
+    max(outlet) of p = 0
+
+Time = 58
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0007899707, Final residual = 2.0702282e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.001264482, Final residual = 4.2023841e-10, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00031643867, Final residual = 1.7548427e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.7645357e-06, Final residual = 4.7410204e-07, No Iterations 1
+time step continuity errors : sum local = 1.1792922e-07, global = 6.3172076e-09, cumulative = -2.7210757e-06
+ExecutionTime = 0.56 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241904 0.034487144 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241904 0.034487144 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.7065081 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5559102
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4444334 0.00065865412 0)
+    max(outlet) of p = 0
+
+Time = 59
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00074432178, Final residual = 1.9519336e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0011912192, Final residual = 3.9209654e-10, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00029252093, Final residual = 1.6911723e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.7000214e-06, Final residual = 4.5374624e-07, No Iterations 1
+time step continuity errors : sum local = 1.1272512e-07, global = 6.5445101e-09, cumulative = -2.7145312e-06
+ExecutionTime = 0.58 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241904 0.034487145 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241904 0.034487145 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.7050572 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5544592
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4456056 0.00062874617 0)
+    max(outlet) of p = 0
+
+Time = 60
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00070144876, Final residual = 1.8407897e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0011198556, Final residual = 3.6613012e-10, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00026764102, Final residual = 1.6300512e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.6381317e-06, Final residual = 4.2197319e-07, No Iterations 1
+time step continuity errors : sum local = 1.0470797e-07, global = 6.694511e-09, cumulative = -2.7078367e-06
+ExecutionTime = 0.59 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487144 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487144 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.7036915 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5530935
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4467252 0.00060021471 0)
+    max(outlet) of p = 0
+
+Time = 61
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0006611671, Final residual = 1.7359183e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0010535018, Final residual = 3.4358227e-10, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00024425085, Final residual = 1.5327298e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.5399314e-06, Final residual = 3.8881446e-07, No Iterations 1
+time step continuity errors : sum local = 9.6372444e-08, global = 6.559377e-09, cumulative = -2.7012773e-06
+ExecutionTime = 0.61 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487142 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487142 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.7024052 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5518073
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4477945 0.00057299518 0)
+    max(outlet) of p = 0
+
+Time = 62
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00062315016, Final residual = 1.6372073e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00098991016, Final residual = 3.2536369e-10, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.0002219973, Final residual = 1.4810979e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.4876939e-06, Final residual = 3.646602e-07, No Iterations 1
+time step continuity errors : sum local = 9.0290464e-08, global = 6.4515519e-09, cumulative = -2.6948258e-06
+ExecutionTime = 0.61 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.03448714 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.03448714 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.7011935 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5505956
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4488157 0.00054702581 0)
+    max(outlet) of p = 0
+
+Time = 63
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00058721865, Final residual = 1.5434801e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00093478026, Final residual = 3.0924929e-10, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00020657443, Final residual = 1.4554377e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.4615795e-06, Final residual = 3.4754532e-07, No Iterations 1
+time step continuity errors : sum local = 8.5967524e-08, global = 6.3937047e-09, cumulative = -2.6884321e-06
+ExecutionTime = 0.61 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.7000519 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.549454
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4497912 0.00052224776 0)
+    max(outlet) of p = 0
+
+Time = 64
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00055338278, Final residual = 1.4550791e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00088602183, Final residual = 2.933063e-10, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00018929044, Final residual = 1.4238885e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.429582e-06, Final residual = 3.2854162e-07, No Iterations 1
+time step continuity errors : sum local = 8.1190722e-08, global = 6.3054769e-09, cumulative = -2.6821266e-06
+ExecutionTime = 0.62 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487137 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487137 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6989766 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5483787
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4507228 0.00049860511 0)
+    max(outlet) of p = 0
+
+Time = 65
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00052152776, Final residual = 1.3713452e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00084153206, Final residual = 2.7707718e-10, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00017671008, Final residual = 1.3752099e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.3804183e-06, Final residual = 3.0325121e-07, No Iterations 1
+time step continuity errors : sum local = 7.4874466e-08, global = 6.1512695e-09, cumulative = -2.6759753e-06
+ExecutionTime = 0.62 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487136 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487136 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.697964 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5473662
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4516127 0.00047604477 0)
+    max(outlet) of p = 0
+
+Time = 66
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00049137197, Final residual = 1.2923323e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00079911534, Final residual = 2.6027424e-10, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.00016385693, Final residual = 1.2843964e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.2890005e-06, Final residual = 2.7243804e-07, No Iterations 1
+time step continuity errors : sum local = 6.7210455e-08, global = 5.8298349e-09, cumulative = -2.6701455e-06
+ExecutionTime = 0.62 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487136 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487136 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6970108 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.546413
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4524626 0.00045451626 0)
+    max(outlet) of p = 0
+
+Time = 67
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00046310053, Final residual = 1.217697e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0007566069, Final residual = 9.6492151e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.00015257969, Final residual = 1.1655448e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.1694983e-06, Final residual = 2.3779055e-07, No Iterations 1
+time step continuity errors : sum local = 5.8616668e-08, global = 5.3844181e-09, cumulative = -2.6647611e-06
+ExecutionTime = 0.64 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487136 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487136 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6961138 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5455159
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4532743 0.00043397157 0)
+    max(outlet) of p = 0
+
+Time = 68
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00043632295, Final residual = 1.1474029e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00071681439, Final residual = 9.0940576e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.0001405098, Final residual = 1.0320936e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.0354057e-06, Final residual = 2.0578596e-07, No Iterations 1
+time step continuity errors : sum local = 5.0689658e-08, global = 4.8955133e-09, cumulative = -2.6598656e-06
+ExecutionTime = 0.64 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487137 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487137 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6952698 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.1
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5446719
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4540496 0.00041436498 0)
+    max(outlet) of p = 0
+
+Time = 69
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00041111015, Final residual = 1.0812906e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00067797424, Final residual = 8.5720566e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.00013048228, Final residual = 9.1121151e-07, No Iterations 3
+GAMG:  Solving for p, Initial residual = 9.1397745e-07, Final residual = 9.1397745e-07, No Iterations 0
+time step continuity errors : sum local = 2.2497479e-07, global = 1.0475183e-08, cumulative = -2.6493904e-06
+ExecutionTime = 0.64 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487137 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487137 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6944779 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.54388
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4547902 0.00039565356 0)
+    max(outlet) of p = 0
+
+Time = 70
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0003873729, Final residual = 1.0187706e-10, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0006421485, Final residual = 8.1047828e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.00011970925, Final residual = 8.2198722e-07, No Iterations 3
+GAMG:  Solving for p, Initial residual = 8.2435126e-07, Final residual = 8.2435126e-07, No Iterations 0
+time step continuity errors : sum local = 2.0277822e-07, global = 8.7148814e-09, cumulative = -2.6406755e-06
+ExecutionTime = 0.65 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241904 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241904 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6937316 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5431337
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4554975 0.00037779622 0)
+    max(outlet) of p = 0
+
+Time = 71
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00036491866, Final residual = 9.5983375e-11, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00060830665, Final residual = 7.6767044e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.00011091327, Final residual = 7.6316565e-07, No Iterations 3
+GAMG:  Solving for p, Initial residual = 7.6524329e-07, Final residual = 7.6524329e-07, No Iterations 0
+time step continuity errors : sum local = 1.8812051e-07, global = 7.5505678e-09, cumulative = -2.6331249e-06
+ExecutionTime = 0.65 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241904 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241904 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6930288 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.542431
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4561731 0.00036075215 0)
+    max(outlet) of p = 0
+
+Time = 72
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00034377628, Final residual = 9.0402095e-11, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00057711175, Final residual = 7.2782392e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.00010322453, Final residual = 7.1676254e-07, No Iterations 3
+GAMG:  Solving for p, Initial residual = 7.1860768e-07, Final residual = 7.1860768e-07, No Iterations 0
+time step continuity errors : sum local = 1.7655194e-07, global = 6.7722114e-09, cumulative = -2.6263527e-06
+ExecutionTime = 0.65 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241904 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241904 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6923677 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5417698
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4568184 0.00034448324 0)
+    max(outlet) of p = 0
+
+Time = 73
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00032376968, Final residual = 8.5122512e-11, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0005485516, Final residual = 6.8941182e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 9.6434847e-05, Final residual = 6.6322906e-07, No Iterations 3
+GAMG:  Solving for p, Initial residual = 6.6484201e-07, Final residual = 6.6484201e-07, No Iterations 0
+time step continuity errors : sum local = 1.6325184e-07, global = 6.2482588e-09, cumulative = -2.6201045e-06
+ExecutionTime = 0.66 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6917462 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5411483
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4574348 0.0003289537 0)
+    max(outlet) of p = 0
+
+Time = 74
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00030496285, Final residual = 8.0150033e-11, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00052134456, Final residual = 6.5234399e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 8.9951506e-05, Final residual = 6.0552278e-07, No Iterations 3
+GAMG:  Solving for p, Initial residual = 6.0691307e-07, Final residual = 6.0691307e-07, No Iterations 0
+time step continuity errors : sum local = 1.4894957e-07, global = 5.7075135e-09, cumulative = -2.614397e-06
+ExecutionTime = 0.66 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6911624 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5405646
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4580235 0.00031412971 0)
+    max(outlet) of p = 0
+
+Time = 75
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0002871778, Final residual = 7.5445459e-11, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0004960437, Final residual = 6.1688601e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 8.4253375e-05, Final residual = 5.3968455e-07, No Iterations 3
+GAMG:  Solving for p, Initial residual = 5.4085395e-07, Final residual = 5.4085395e-07, No Iterations 0
+time step continuity errors : sum local = 1.32672e-07, global = 5.1640566e-09, cumulative = -2.6092329e-06
+ExecutionTime = 0.66 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6906142 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5400164
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4585858 0.00029997889 0)
+    max(outlet) of p = 0
+
+Time = 76
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00027040881, Final residual = 7.1016241e-11, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00047080742, Final residual = 5.8318093e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 7.857009e-05, Final residual = 4.8086227e-07, No Iterations 3
+GAMG:  Solving for p, Initial residual = 4.8184544e-07, Final residual = 4.8184544e-07, No Iterations 0
+time step continuity errors : sum local = 1.1814243e-07, global = 4.5168646e-09, cumulative = -2.604716e-06
+ExecutionTime = 0.68 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6900995 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.1
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5395016
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4591229 0.00028647033 0)
+    max(outlet) of p = 0
+
+Time = 77
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00025460488, Final residual = 6.6834561e-11, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00044752154, Final residual = 5.5155375e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 7.3023295e-05, Final residual = 4.2449206e-07, No Iterations 3
+GAMG:  Solving for p, Initial residual = 4.2531091e-07, Final residual = 4.2531091e-07, No Iterations 0
+time step continuity errors : sum local = 1.0423545e-07, global = 3.9809666e-09, cumulative = -2.6007351e-06
+ExecutionTime = 0.68 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6896162 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.1
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5390183
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.459636 0.00027357447 0)
+    max(outlet) of p = 0
+
+Time = 78
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00023965486, Final residual = 6.2894996e-11, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00042508742, Final residual = 5.2265818e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 6.8145039e-05, Final residual = 3.8639801e-07, No Iterations 3
+GAMG:  Solving for p, Initial residual = 3.8710105e-07, Final residual = 3.8710105e-07, No Iterations 0
+time step continuity errors : sum local = 9.4832088e-08, global = 3.5045534e-09, cumulative = -2.5972305e-06
+ExecutionTime = 0.68 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6891624 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.1
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5385645
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.460126 0.00026126309 0)
+    max(outlet) of p = 0
+
+Time = 79
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00022559448, Final residual = 5.917536e-11, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00040382783, Final residual = 4.9565897e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 6.3371968e-05, Final residual = 3.5870855e-07, No Iterations 3
+GAMG:  Solving for p, Initial residual = 3.5932394e-07, Final residual = 3.5932394e-07, No Iterations 0
+time step continuity errors : sum local = 8.7993393e-08, global = 3.1620594e-09, cumulative = -2.5940685e-06
+ExecutionTime = 0.7 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6887365 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.1
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5381386
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4605941 0.00024950937 0)
+    max(outlet) of p = 0
+
+Time = 80
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0002123074, Final residual = 5.5660786e-11, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00038412111, Final residual = 4.7068619e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 5.9217339e-05, Final residual = 3.374392e-07, No Iterations 3
+GAMG:  Solving for p, Initial residual = 3.3798484e-07, Final residual = 3.3798484e-07, No Iterations 0
+time step continuity errors : sum local = 8.2737876e-08, global = 3.0471873e-09, cumulative = -2.5910213e-06
+ExecutionTime = 0.71 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6883368 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.1
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5377389
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4610412 0.00023828781 0)
+    max(outlet) of p = 0
+
+Time = 81
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00019977053, Final residual = 5.2350362e-11, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0003651015, Final residual = 4.4678898e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 5.5532659e-05, Final residual = 3.1531667e-07, No Iterations 3
+GAMG:  Solving for p, Initial residual = 3.1579709e-07, Final residual = 3.1579709e-07, No Iterations 0
+time step continuity errors : sum local = 7.7280153e-08, global = 2.9858975e-09, cumulative = -2.5880354e-06
+ExecutionTime = 0.71 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6879618 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.1
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5373639
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4614683 0.00022757415 0)
+    max(outlet) of p = 0
+
+Time = 82
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00018794751, Final residual = 4.9215183e-11, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00034779769, Final residual = 4.2373623e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 5.2247722e-05, Final residual = 2.9337584e-07, No Iterations 3
+GAMG:  Solving for p, Initial residual = 2.9379692e-07, Final residual = 2.9379692e-07, No Iterations 0
+time step continuity errors : sum local = 7.1873479e-08, global = 2.8058088e-09, cumulative = -2.5852296e-06
+ExecutionTime = 0.73 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6876101 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.1
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5370123
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4618763 0.00021734522 0)
+    max(outlet) of p = 0
+
+Time = 83
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00017678738, Final residual = 4.6263894e-11, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00033105948, Final residual = 4.0223371e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 4.8919412e-05, Final residual = 2.6661325e-07, No Iterations 3
+GAMG:  Solving for p, Initial residual = 2.6697363e-07, Final residual = 2.6697363e-07, No Iterations 0
+time step continuity errors : sum local = 6.529197e-08, global = 2.5692799e-09, cumulative = -2.5826603e-06
+ExecutionTime = 0.73 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6872804 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.1
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5366826
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4622659 0.00020757889 0)
+    max(outlet) of p = 0
+
+Time = 84
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00016626923, Final residual = 4.3480284e-11, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00031522268, Final residual = 3.8150785e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 4.6004469e-05, Final residual = 2.4168445e-07, No Iterations 3
+GAMG:  Solving for p, Initial residual = 2.4199201e-07, Final residual = 2.4199201e-07, No Iterations 0
+time step continuity errors : sum local = 5.9165753e-08, global = 2.3152321e-09, cumulative = -2.5803451e-06
+ExecutionTime = 0.73 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6869715 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.1
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5363737
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4626382 0.00019825405 0)
+    max(outlet) of p = 0
+
+Time = 85
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.000156336, Final residual = 4.0850787e-11, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00029999653, Final residual = 3.6179458e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 4.3113292e-05, Final residual = 9.8360873e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 9.8477255e-07, Final residual = 9.8477255e-07, No Iterations 0
+time step continuity errors : sum local = 2.4071161e-07, global = 3.4352409e-08, cumulative = -2.5459926e-06
+ExecutionTime = 0.75 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6866858 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000003
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5360879
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4629938 0.00018935219 0)
+    max(outlet) of p = 0
+
+Time = 86
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00014697362, Final residual = 3.8392785e-11, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0002853583, Final residual = 3.434745e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 4.0370345e-05, Final residual = 9.2735559e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 9.2839669e-07, Final residual = 9.2839669e-07, No Iterations 0
+time step continuity errors : sum local = 2.2687394e-07, global = 3.3310776e-08, cumulative = -2.5126819e-06
+ExecutionTime = 0.75 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6864158 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000003
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5358179
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4633335 0.00018085627 0)
+    max(outlet) of p = 0
+
+Time = 87
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00013813562, Final residual = 3.605533e-11, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00027177593, Final residual = 3.2619541e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 3.7775681e-05, Final residual = 8.6497448e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 8.6589408e-07, Final residual = 8.6589408e-07, No Iterations 0
+time step continuity errors : sum local = 2.1154972e-07, global = 3.1567371e-08, cumulative = -2.4811145e-06
+ExecutionTime = 0.75 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6861612 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000003
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5355633
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.463658 0.00017274342 0)
+    max(outlet) of p = 0
+
+Time = 88
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00012981684, Final residual = 3.3845609e-11, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00025866381, Final residual = 3.0989204e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 3.5550308e-05, Final residual = 8.0562825e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 8.0643584e-07, Final residual = 8.0643584e-07, No Iterations 0
+time step continuity errors : sum local = 1.969798e-07, global = 3.0035967e-08, cumulative = -2.4510785e-06
+ExecutionTime = 0.76 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6859222 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000003
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5353243
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.463968 0.00016499422 0)
+    max(outlet) of p = 0
+
+Time = 89
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00012197328, Final residual = 3.1764027e-11, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00024655665, Final residual = 2.9468251e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 3.3401889e-05, Final residual = 7.6066427e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 7.6138013e-07, Final residual = 7.6138013e-07, No Iterations 0
+time step continuity errors : sum local = 1.8593672e-07, global = 2.8720761e-08, cumulative = -2.4223578e-06
+ExecutionTime = 0.76 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6856986 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000003
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5351008
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.464264 0.00015759194 0)
+    max(outlet) of p = 0
+
+Time = 90
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00011456579, Final residual = 2.9802576e-11, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00023492008, Final residual = 2.7976707e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 3.1549348e-05, Final residual = 7.1837239e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 7.1900531e-07, Final residual = 7.1900531e-07, No Iterations 0
+time step continuity errors : sum local = 1.7555539e-07, global = 2.7526361e-08, cumulative = -2.3948314e-06
+ExecutionTime = 0.77 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6854902 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000003
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5348924
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4645467 0.00015052167 0)
+    max(outlet) of p = 0
+
+Time = 91
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00010758856, Final residual = 2.7954749e-11, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00022384408, Final residual = 2.6586398e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 2.9743737e-05, Final residual = 6.7621951e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 6.767768e-07, Final residual = 6.767768e-07, No Iterations 0
+time step continuity errors : sum local = 1.6521591e-07, global = 2.6105735e-08, cumulative = -2.3687257e-06
+ExecutionTime = 0.79 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6852961 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000003
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5346983
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4648168 0.0001437694 0)
+    max(outlet) of p = 0
+
+Time = 92
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.00010099812, Final residual = 2.6216007e-11, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00021342018, Final residual = 2.5264341e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 2.807759e-05, Final residual = 6.2945099e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 6.2993631e-07, Final residual = 6.2993631e-07, No Iterations 0
+time step continuity errors : sum local = 1.5375615e-07, global = 2.4961423e-08, cumulative = -2.3437643e-06
+ExecutionTime = 0.79 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6851153 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000002
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5345175
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4650749 0.00013732149 0)
+    max(outlet) of p = 0
+
+Time = 93
+
+DILUPBiCG:  Solving for Ux, Initial residual = 9.4797107e-05, Final residual = 2.4578786e-11, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00020329117, Final residual = 2.3991999e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 2.647238e-05, Final residual = 5.874193e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 5.8784334e-07, Final residual = 5.8784334e-07, No Iterations 0
+time step continuity errors : sum local = 1.434602e-07, global = 2.3850196e-08, cumulative = -2.3199141e-06
+ExecutionTime = 0.79 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6849468 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000002
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5343489
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4653213 0.0001311646 0)
+    max(outlet) of p = 0
+
+Time = 94
+
+DILUPBiCG:  Solving for Ux, Initial residual = 8.8947681e-05, Final residual = 2.3034998e-11, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00019377317, Final residual = 2.2815996e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 2.4974581e-05, Final residual = 5.4074487e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 5.4111051e-07, Final residual = 5.4111051e-07, No Iterations 0
+time step continuity errors : sum local = 1.3203654e-07, global = 2.2828669e-08, cumulative = -2.2970854e-06
+ExecutionTime = 0.8 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6847896 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000002
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5341917
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4655568 0.00012528557 0)
+    max(outlet) of p = 0
+
+Time = 95
+
+DILUPBiCG:  Solving for Ux, Initial residual = 8.3435277e-05, Final residual = 2.1582287e-11, No Iterations 4
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00018462206, Final residual = 2.1694037e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 2.3567908e-05, Final residual = 5.0463289e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 5.0495258e-07, Final residual = 5.0495258e-07, No Iterations 0
+time step continuity errors : sum local = 1.2319728e-07, global = 2.1802532e-08, cumulative = -2.2752829e-06
+ExecutionTime = 0.8 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6846429 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000002
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.534045
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4657817 0.00011967168 0)
+    max(outlet) of p = 0
+
+Time = 96
+
+DILUPBiCG:  Solving for Ux, Initial residual = 7.8243319e-05, Final residual = 9.9093494e-09, No Iterations 3
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00017597193, Final residual = 2.0638639e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 2.2251133e-05, Final residual = 4.6818273e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 4.6846051e-07, Final residual = 4.6846051e-07, No Iterations 0
+time step continuity errors : sum local = 1.1427989e-07, global = 2.0897467e-08, cumulative = -2.2543854e-06
+ExecutionTime = 0.8 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6845061 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000002
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5339082
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4659966 0.00011431133 0)
+    max(outlet) of p = 0
+
+Time = 97
+
+DILUPBiCG:  Solving for Ux, Initial residual = 7.3342526e-05, Final residual = 9.2653338e-09, No Iterations 3
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00016775134, Final residual = 1.9639753e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 2.1045294e-05, Final residual = 4.3951965e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 4.3976368e-07, Final residual = 4.3976368e-07, No Iterations 0
+time step continuity errors : sum local = 1.0726705e-07, global = 2.0006773e-08, cumulative = -2.2343786e-06
+ExecutionTime = 0.82 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6843786 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000002
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5337807
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4662018 0.00010919308 0)
+    max(outlet) of p = 0
+
+Time = 98
+
+DILUPBiCG:  Solving for Ux, Initial residual = 6.8737386e-05, Final residual = 8.6606085e-09, No Iterations 3
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0001598953, Final residual = 1.8682684e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.9874563e-05, Final residual = 4.1187179e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 4.1208558e-07, Final residual = 4.1208558e-07, No Iterations 0
+time step continuity errors : sum local = 1.005051e-07, global = 1.9174704e-08, cumulative = -2.2152039e-06
+ExecutionTime = 0.82 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6842599 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000002
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.533662
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4663979 0.00010430481 0)
+    max(outlet) of p = 0
+
+Time = 99
+
+DILUPBiCG:  Solving for Ux, Initial residual = 6.4392719e-05, Final residual = 8.0931536e-09, No Iterations 3
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00015252789, Final residual = 1.7774395e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.8831472e-05, Final residual = 3.8931713e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 3.8950587e-07, Final residual = 3.8950587e-07, No Iterations 0
+time step continuity errors : sum local = 9.4988673e-08, global = 1.8381418e-08, cumulative = -2.1968225e-06
+ExecutionTime = 0.82 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6841495 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000002
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5335517
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4665852 9.963565e-05 0)
+    max(outlet) of p = 0
+
+Time = 100
+
+DILUPBiCG:  Solving for Ux, Initial residual = 6.0301022e-05, Final residual = 7.5606679e-09, No Iterations 3
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0001453939, Final residual = 1.6906124e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.7801205e-05, Final residual = 3.6451549e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 3.6468038e-07, Final residual = 3.6468038e-07, No Iterations 0
+time step continuity errors : sum local = 8.8926376e-08, global = 1.7615946e-08, cumulative = -2.1792065e-06
+ExecutionTime = 0.84 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.684047 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000002
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5334491
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4667641 9.5175569e-05 0)
+    max(outlet) of p = 0
+
+Time = 101
+
+DILUPBiCG:  Solving for Ux, Initial residual = 5.645154e-05, Final residual = 7.0616604e-09, No Iterations 3
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00013869893, Final residual = 1.6083666e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.6876676e-05, Final residual = 3.4059892e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 3.4074255e-07, Final residual = 3.4074255e-07, No Iterations 0
+time step continuity errors : sum local = 8.3082196e-08, global = 1.6874307e-08, cumulative = -2.1623322e-06
+ExecutionTime = 0.84 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6839518 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000002
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5333539
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.466935 9.0915036e-05 0)
+    max(outlet) of p = 0
+
+Time = 102
+
+DILUPBiCG:  Solving for Ux, Initial residual = 5.2819291e-05, Final residual = 6.5935126e-09, No Iterations 3
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00013228408, Final residual = 1.5298573e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.5951892e-05, Final residual = 3.1796477e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 3.1808964e-07, Final residual = 3.1808964e-07, No Iterations 0
+time step continuity errors : sum local = 7.7552785e-08, global = 1.6159739e-08, cumulative = -2.1461725e-06
+ExecutionTime = 0.84 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6838635 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000002
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5332657
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4670982 8.6844859e-05 0)
+    max(outlet) of p = 0
+
+Time = 103
+
+DILUPBiCG:  Solving for Ux, Initial residual = 4.9409662e-05, Final residual = 6.1546611e-09, No Iterations 3
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00012610244, Final residual = 1.45545e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.5128894e-05, Final residual = 2.956125e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 2.9572051e-07, Final residual = 2.9572051e-07, No Iterations 0
+time step continuity errors : sum local = 7.2093864e-08, global = 1.5608622e-08, cumulative = -2.1305639e-06
+ExecutionTime = 0.86 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6837817 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000002
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5331839
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4672542 8.2956156e-05 0)
+    max(outlet) of p = 0
+
+Time = 104
+
+DILUPBiCG:  Solving for Ux, Initial residual = 4.6195579e-05, Final residual = 5.7430745e-09, No Iterations 3
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00012030081, Final residual = 1.3856698e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.4307228e-05, Final residual = 2.7573848e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 2.7583213e-07, Final residual = 2.7583213e-07, No Iterations 0
+time step continuity errors : sum local = 6.7240849e-08, global = 1.4821098e-08, cumulative = -2.1157428e-06
+ExecutionTime = 0.86 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.683706 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5331081
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4674032 7.9240356e-05 0)
+    max(outlet) of p = 0
+
+Time = 105
+
+DILUPBiCG:  Solving for Ux, Initial residual = 4.31711e-05, Final residual = 5.3567793e-09, No Iterations 3
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00011470117, Final residual = 1.3187789e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.3563206e-05, Final residual = 2.5772548e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 2.5780677e-07, Final residual = 2.5780677e-07, No Iterations 0
+time step continuity errors : sum local = 6.2842939e-08, global = 1.4170066e-08, cumulative = -2.1015727e-06
+ExecutionTime = 0.86 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6836359 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.533038
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4675455 7.5689206e-05 0)
+    max(outlet) of p = 0
+
+Time = 106
+
+DILUPBiCG:  Solving for Ux, Initial residual = 4.032842e-05, Final residual = 4.9943642e-09, No Iterations 3
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00010942307, Final residual = 1.2560233e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.2852954e-05, Final residual = 2.4265208e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 2.4272309e-07, Final residual = 2.4272309e-07, No Iterations 0
+time step continuity errors : sum local = 5.9162877e-08, global = 1.3557845e-08, cumulative = -2.0880149e-06
+ExecutionTime = 0.88 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6835712 in cell 900 at location (0.05 0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5329733
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4676815 7.229481e-05 0)
+    max(outlet) of p = 0
+
+Time = 107
+
+DILUPBiCG:  Solving for Ux, Initial residual = 3.7648966e-05, Final residual = 4.6542166e-09, No Iterations 3
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00010440222, Final residual = 1.1949375e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.2182739e-05, Final residual = 2.2704565e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 2.2710723e-07, Final residual = 2.2710723e-07, No Iterations 0
+time step continuity errors : sum local = 5.5353774e-08, global = 1.2763286e-08, cumulative = -2.0752516e-06
+ExecutionTime = 0.88 s  ClockTime = 1 s
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6835114 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5329135
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4678114 6.9049578e-05 0)
+    max(outlet) of p = 0
+
+Time = 108
+
+DILUPBiCG:  Solving for Ux, Initial residual = 3.5134525e-05, Final residual = 4.3350716e-09, No Iterations 3
+DILUPBiCG:  Solving for Uy, Initial residual = 9.9604333e-05, Final residual = 1.1374897e-09, No Iterations 3
+GAMG:  Solving for p, Initial residual = 1.154704e-05, Final residual = 2.1414357e-07, No Iterations 2
+GAMG:  Solving for p, Initial residual = 2.1419734e-07, Final residual = 2.1419734e-07, No Iterations 0
+time step continuity errors : sum local = 5.2204789e-08, global = 1.2264502e-08, cumulative = -2.0629871e-06
+ExecutionTime = 0.88 s  ClockTime = 1 s
+
+
+SIMPLE solution converged in 108 iterations
+
+fieldMinMax minmaxdomain write:
+    min(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    max(U) = (0.92241905 0.034487138 0) in cell 0 at location (0.05 -0.45 0.05)
+    min(p) = 0 in cell 99 at location (10 -0.45 0.05)
+    max(p) = 1.6834563 in cell 0 at location (0.05 -0.45 0.05)
+
+surfaceFieldValue inMassFlow write:
+    sum(inlet) of phi = -0.1
+
+surfaceFieldValue outMassFlow write:
+    sum(outlet) of phi = 0.10000001
+
+surfaceFieldValue inPre write:
+    weightedAverage(inlet) of phi = -0.01
+    weightedAverage(inlet) of U = (1 0 0)
+    weightedAverage(inlet) of p = 1.5328584
+
+surfaceFieldValue outMax write:
+    max(outlet) of U = (1.4679355 6.5946282e-05 0)
+    max(outlet) of p = 0
+
+End
+
